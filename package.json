@@ -3,17 +3,21 @@
   "version": "1.0.0",
   "description": "a babel plugin to handle console statement",
   "main": "index.js",
+  "type": "commonjs",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc ./lib/index.ts && cross-env NODE_ENV=development npx babel test.js --plugins=./lib/index.js -o out.js",
+    "build": "tsc ./lib/index.ts && cross-env NODE_ENV=production npx babel test.js --plugins=./lib/index.js -o out.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.24.7",
-    "@babel/core": "^7.24.7"
+    "@babel/core": "^7.24.7",
+    "cross-env": "^7.0.3"
   },
   "dependencies": {
     "@types/node": "^20.14.2",
