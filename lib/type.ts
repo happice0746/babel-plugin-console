@@ -1,9 +1,18 @@
 export type PluginOptions = {
   env: string;
   removeMethods?: Array<string | Function>;
-  additionalStyleMethods?: { [key: string]: string };
+  customStyle?: Style;
 };
-export type ConsolePlugin = {
-  opt: PluginOptions;
+export type ConsolePluginState = {
+  opts: PluginOptions;
   file: any;
+};
+export type Style = {
+  [color: string]: string;
+};
+export type PluginObj<T> = {
+  name: string;
+  visitor: {
+    [key: string]: (path: any, state: T) => any;
+  };
 };

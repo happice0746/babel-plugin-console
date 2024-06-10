@@ -9,8 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsc ./lib/index.ts && cross-env NODE_ENV=development npx babel test.js --plugins=./lib/index.js -o out.js",
-    "build": "tsc ./lib/index.ts && cross-env NODE_ENV=production npx babel test.js --plugins=./lib/index.js -o out.js"
+    "dev": "tsc ./lib/index.ts && cross-env NODE_ENV=development babel example.js -o out.js",
+    "build": "tsc ./lib/index.ts && cross-env NODE_ENV=production babel example.js -o out.js"
   },
   "author": "",
   "license": "ISC",
