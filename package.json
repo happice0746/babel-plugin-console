@@ -12,8 +12,23 @@
     "dev": "tsc ./lib/index.ts && cross-env NODE_ENV=development babel example.js -o out.js",
     "build": "tsc ./lib/index.ts && cross-env NODE_ENV=production babel example.js -o out.js"
   },
-  "author": "",
+  "author": "happice",
   "license": "ISC",
+  "files": [
+    "./lib/index.js",
+    "README.md"
+  ],
+  "keywords": [
+    "babel-plugin",
+    "console"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happice0746/babel-plugin-console"
+  },
+  "bugs": {
+    "url": "https://github.com/happice0746/babel-plugin-console/issues"
+  },
   "devDependencies": {
     "@babel/cli": "^7.24.7",
     "@babel/core": "^7.24.7",
