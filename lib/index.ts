@@ -31,11 +31,16 @@ export default function BabelConsolePlugin({
                 ...customStyle,
               };
             }
-            path.node.arguments.map((item) => item.value);
+            // path.node.arguments.map((item) => item.value);
             const args: any[] = [
-              types.stringLiteral(`%c${path.node.arguments.map((item) => item.value).join(" ")}`),
+              types.stringLiteral(
+                `%c${path.node.arguments.map(() => "%s").join(" ")}`
+              ),
               types.stringLiteral(style[methodName]),
-              types.stringLiteral(`${file.opts.filename} (${lineNum}:${columnNum})`),
+              ...path.node.arguments,
+              types.stringLiteral(
+                `${file.opts.filename} (${lineNum}:${columnNum})`
+              ),
             ];
             path.node.arguments = args;
           }
@@ -44,11 +49,3 @@ export default function BabelConsolePlugin({
     },
   };
 }
-// export function handleFunctionAndIdentifier(arr: any[]) {
-//   return arr.map((item) => {
-//     if (item.type === "Identifier") {
-//       return item.name;
-//     }
-//     return item.value;
-//   });
-// }
