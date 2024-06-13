@@ -4,9 +4,7 @@
 
 A plugin to optimize console statement🥰
 
-~~Now the plugin can handle Literal, but it cant handle Identifier and Function caller.
-
-~~I will try to fix the question in next version.
+~~Now the plugin can handle Literal, but it cant handle Identifier and Function caller~~.
 
 The console statement will be deleted in production, but they will be add color and location in development
 

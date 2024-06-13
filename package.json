@@ -15,7 +15,8 @@
   "author": "happice",
   "license": "ISC",
   "files": [
-    "./lib/index.js",
+    "./lib/*.js",
+    "example.js",
     "README.md"
   ],
   "keywords": [
