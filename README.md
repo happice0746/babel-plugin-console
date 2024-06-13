@@ -11,14 +11,14 @@ The console statement will be deleted in production, but they will be add color 
 ## Start
 
 ```powershell
-npm install "Actually, I haven't uploaded this plugin to the npm repository yet"
+npm install babel-plugin-console-happice
 ```
 
 ## How to use
 
 ```javascript
 /** babel.config.js */
-const BabelConsolePlugin = require("./lib/index");
+const BabelConsolePlugin = require("babel-plugin-console-happice/lib");
 module.exports = {
   plugins: [
     [

@@ -1,6 +1,6 @@
 {
-  "name": "babel-plugin-console",
-  "version": "1.0.0",
+  "name": "babel-plugin-console-happice",
+  "version": "1.0.1",
   "description": "a babel plugin to handle console statement",
   "main": "index.js",
   "type": "commonjs",
