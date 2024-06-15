@@ -1,4 +1,4 @@
-const BabelConsolePlugin = require("./lib/index");
+const BabelConsolePlugin = require("babel-plugin-console-happice/lib");
 module.exports = {
   plugins: [
     [
