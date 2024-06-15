@@ -16,6 +16,8 @@ npm install babel-plugin-console-happice
 
 ## How to use
 
+Please ensure the variable process.env.NODE_ENV isnt undefined
+
 ```javascript
 /** babel.config.js */
 const BabelConsolePlugin = require("babel-plugin-console-happice/lib");
